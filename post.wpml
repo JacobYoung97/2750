@@ -1,0 +1,5 @@
+.h(size=2,text="Post to a Stream Here").t(text="This is where you post to the last viewed stream you are a part of")
+.d()
+.a(set="username,user",set="stream,streamChoice",set="input,area",set="text,n/input",exe="./post stream e/text username")
+.m(action="post.php",hidden="username",name="user",hidden="stream",name="streamChoice",area="10X80",submit="Submit")
+.m(action="view.php",hidden="username",name="user",hidden="stream",name="streamChoice",submit="Return to view page")

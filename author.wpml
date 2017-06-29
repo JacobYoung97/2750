@@ -1,0 +1,6 @@
+.h(size=2,text="Add or Remove from Streams Here:").t(text="You can create anything you want!")
+.d()
+.a(set="username,userID",set="choice,choice",set="streams,streams",empty="choice,streams",exe="./addauthor choice streams username")
+.m(action="author.php",text="Author ID/username",name="userID",text="Streams (list form like cats,dogs):",name="streams",radio="add",name="choice",radio="remove",name="choice",submit="Submit")
+.m(action="streams.php",hidden="username",name="user",submit="Choose a Stream (based on last entered username)")
+.b(name="Return to login",link="index.php")

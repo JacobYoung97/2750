@@ -1,0 +1,4 @@
+.h(size=2,text="Enter your user ID here").t(text="Login to view streams of messages")
+.d()
+.i(action="streams.php",text="Enter user ID",name="user",value="")
+.b(name="No user ID? Click here.",link="author.php")

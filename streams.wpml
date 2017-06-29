@@ -1,0 +1,4 @@
+.h(size=2,text="Select a Stream:").t(text="You will begin to view the messages after submitting")
+.d()
+.a(set="username,user",exe="./streams.py username")
+.b(name="Return to login page",link="index.php")
