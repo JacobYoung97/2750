@@ -9,22 +9,22 @@ Final grade = 82%. Assignment grade = 28.75/40 (mainly because of A1's 1/10 grad
 A1: Convert C++ "Lite" to C
 - This assignment was taking in a "C++" program and changing the code to work with a C compiler.
 - Some of the changed aspects include changing objects to structs with function pointers and then calling those new functions, creating a "constructor" that would set the function pointers, etc. This can be seen in comparing post.cc to post.c.
-1/10 (9/10 of the test cases failed when marking through auto-grading)
+- 1/10 (9/10 of the test cases failed when marking through auto-grading)
 
 A2: 
 - This assignment was a terminal version of the overall messaging program.
-- This was the backbone of the assignment. It included making the initial versions of adding to streams (addauthor.c), posting to streams (post.c)
+- This was the backbone of the assignment. It included making the initial versions of adding to streams (addauthor.c), posting to streams (post.c), and viewing streams (view.py).
 - It also utilized A1's conversion program to change post.cc to post.c
-9/10 (I accidentally submitted the files I was testing with (-1))
+- 9/10 (I accidentally submitted the files I was testing with (-1))
 
 A3: 
 - This was the first assignment that interfaced the code that was written with the Internet.
 - There was also an aspect that was needed to convert markup files (the .wpml files) into the webpages themselves that would display the content
-10/10
+- 10/10 (no issues)
 
 A4: 
 - This assignment was converting the usage of files in the previous two assignment to a database with SQL commands
-8.75/10 (did not sort by user name alphabetically (-1) and did not display multiple user names (-0.25))
+- 8.75/10 (did not sort by user name alphabetically (-1) and did not display multiple user names (-0.25))
 
 ## Coding Languages Used:
 *********************************
@@ -36,10 +36,10 @@ C, "C++", Python, PHP, HTML, SQL (embedded in C), and Makefiles
 
 ## Possible future additions:
 *********************************
-"Easy": add css stylesheet to be included at the <head> </head> and/or a title for the webpages
+Add css stylesheet to be included at the <head> </head> and/or a title for the webpages
 	-this can be added as a secondary file on the command line to execute the program that creates the webpages
 
-"Easy": change the file structure to better organize the files with src/ , include/ , docs/ , and possible css or javascript later
+Change the file structure to better organize the files with src/ , include/ , docs/ , and possible css or javascript later
 	-will need to change where programs are called in every file
 
-"Medium": add javascript functionality either from a script file on the command line or embedded in the tags (would need some more if-statements)	
+Add javascript functionality either from a script file on the command line or embedded in the tags (would need some more if-statements)	
