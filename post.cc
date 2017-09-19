@@ -10,7 +10,7 @@ This file will write a post to a stream
 #include <time.h>
 #include "stream.h"
 
-/* This class will get the user's info and then */
+/* This class will get the user's info and then post to a stream */
 class PostEntry {
     char * readInput(char * argv) {
         /* Read the post entry from the user (easier now than in A2) */
