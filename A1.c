@@ -10,10 +10,8 @@ This program is used to convert c++ to c code
 #include"newCode.h"
 #include"newCode2.h"
 
-int main(int argc, char* argv[])
-{
-    if(argc != 2)
-    {
+int main(int argc, char* argv[]) {
+    if(argc != 2) {
         printf("You do not have the correct amount of arguments!\n");
         exit(0);
     }
@@ -64,21 +62,18 @@ int main(int argc, char* argv[])
     storage = calloc(rows, sizeof(char*));
     savedFunctions = malloc(sizeof(char*) * rows);
     functionNames = malloc(sizeof(char*) * 30);
-    for(i = 0; i < rows; i++)
-    {
+    for(i = 0; i < rows; i++) {
         storage[i] = calloc(columns, sizeof(char));
         savedFunctions[i] = calloc(columns, sizeof(char));
     }
-    for(i = 0; i < 20; i++)
-    {
+    for(i = 0; i < 20; i++) {
         functionNames[i] = malloc(sizeof(char) * columns);
     }
     i = 0;
 
     /* The following converts the file name */
     filePtr = fopen(argv[1], "r");
-    if(filePtr == NULL)
-    {
+    if(filePtr == NULL) {
         printf("Error opening the cc file!\n");
         free(fileName);
         exit(0);
@@ -87,16 +82,14 @@ int main(int argc, char* argv[])
     newFile = changeFile(fileName);
     writtenPtr = fopen(newFile, "w");
     /* Error opening file */
-    if(writtenPtr == NULL)
-    {
+    if(writtenPtr == NULL) {
         printf("Error opening file!\n");
         free(fileName); free(newFile);
         exit(0);
     }
 
     /* This gets every single char from the file */
-    while((theChar = fgetc(filePtr)) != EOF)
-    {
+    while((theChar = fgetc(filePtr)) != EOF) {
         convertedChar = (char)theChar;
         switch(convertedChar)
         {
@@ -170,14 +163,12 @@ int main(int argc, char* argv[])
         }
     }
     savedFunctions = realloc(savedFunctions, sizeof(char*) * rows);
-    for(i = 0; i < rows; i++)
-    {
+    for(i = 0; i < rows; i++) {
         savedFunctions[i] = realloc(savedFunctions[i], sizeof(char) * columns);
     }
     curlyBraces = 0;
     /* This is when we go through each character and do stuff with it */
-    for(i = 0; i < rows; i++)
-    {
+    for(i = 0; i < rows; i++) {
         storedFuncs = 0;
         isUnique = 0;
         isFunc = 0;
@@ -686,16 +677,14 @@ int main(int argc, char* argv[])
             }
         }
         /* Remove functions from previous struct here */
-        if(storedFuncs > 0)
-        {
+        if(storedFuncs > 0) {
             fputc('\n', writtenPtr);
             constructor = constructBody(savedFunctions, structName, storedFuncs); /* This will print the body of the constructor */
             fputs(constructor, writtenPtr);
             free(constructor);
         }
         free(structName);
-        for(j = 0; j < storedFuncs; j++)
-        {
+        for(j = 0; j < storedFuncs; j++) {
             strcpy(savedFunctions[j], "");
         }
     }
@@ -705,13 +694,11 @@ int main(int argc, char* argv[])
     fclose(writtenPtr);
     free(fileName);
     free(newFile);
-    for(i = 0; i < rows; i++)
-    {
+    for(i = 0; i < rows; i++) {
         free(storage[i]);
         free(savedFunctions[i]);
     }
-    for(i = 0; i < 20; i++)
-    {
+    for(i = 0; i < 20; i++) {
         free(functionNames[i]);
     }
     free(savedFunctions);
