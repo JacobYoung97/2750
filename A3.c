@@ -9,10 +9,8 @@ This assignment converts A2 to work with webpages
 #include <string.h>
 #include "elements.h"
 
-int main(int argc, char * argv[])
-{
-    if(argc < 2)
-    {
+int main(int argc, char * argv[]) {
+    if(argc < 2) {
         printf("Need a webpage markup file!\n");
         return 0;
     }
@@ -32,12 +30,10 @@ int main(int argc, char * argv[])
         lineLength = strlen(fileLine);
         for(i = 0; i < lineLength; i++) /* Checks the whole line for tags */
         {
-            if(fileLine[i] == '\"' && (i > 0 && fileLine[i - 1] != '\\') && inQuotes == 0)
-            {
+            if(fileLine[i] == '\"' && (i > 0 && fileLine[i - 1] != '\\') && inQuotes == 0) {
                 inQuotes = 1; /* Basically, if we find a quotation mark, this will say so */
             }
-            else if(fileLine[i] == '\"' && (i > 0 && fileLine[i - 1] != '\\') && inQuotes == 1)
-            {
+            else if(fileLine[i] == '\"' && (i > 0 && fileLine[i - 1] != '\\') && inQuotes == 1) {
                 inQuotes = 0; /* Basically, if we find the end quotation mark, this will say so */
             }
             else if(inQuotes == 0) /* This will check the interface tag when we are not in quotes*/
