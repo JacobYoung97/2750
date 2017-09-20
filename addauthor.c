@@ -9,17 +9,14 @@ This program will add/remove the author to the specified streams
 #include <string.h>
 #include "stream.h"
 
-int main(int argc, char * argv[])
-{
+int main(int argc, char * argv[]) {
     /* ./addauthor [choice] [streams] [user] */
-    if(argc < 4)
-    {
+    if(argc < 4) {
         printf("Please put a username and some streams to either add or remove yourself!\n");
         return 0; /* They need to see this message */
     }
 
-    if(strlen(argv[2]) > 202)
-    {
+    if(strlen(argv[2]) > 202) {
         printf("Too many streams added!\n");
         return 0; /* I want the user to see this message */
     }
@@ -33,8 +30,7 @@ int main(int argc, char * argv[])
 
     if(strcmp(argv[1], "remove") == 0) /* Remove from the stream's list */
     {
-        for(i = 3; i < argc; i++)
-        {
+        for(i = 3; i < argc; i++) {
             strcat(username, argv[i]);
             if(i != argc - 1) /* The last argument does not need a space with it */
             {
@@ -46,11 +42,9 @@ int main(int argc, char * argv[])
         free(streamList);
         return 0;
     }
-    for(i = 3; i < argc; i++)
-    {
+    for(i = 3; i < argc; i++) {
         strcat(username, argv[i]);
-        if(i != argc - 1)
-        {
+        if(i != argc - 1) {
             strcat(username, " ");
         }
     }
