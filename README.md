@@ -34,6 +34,14 @@ The HTML that it creates is not structured with CSS or JavaScript to make it loo
 Languages used during creation:
 C, "C++", Python, PHP, HTML, SQL (embedded in C), and Makefiles
 
+## How to run:
+*********************************
+Copy the files from this git repository to a server that runs a \*nix distribution. The makefile runs on Linux and has paths specific to \*nix operating systems. You can change these if you have the equivalents.
+
+Type 'make' on the server to compile the programs needed to run on the server. Type 'make clean' to remove the .o files. Afterwards, go to your webpage's index.php page and the progarm should work as intended.
+
+This program does not use any cookies so navigation should only be with the links in the webpages themselves. Navigation with broswer arrows might, and probably will, cause the data sent between pages to be lost.
+
 ## Possible future additions:
 *********************************
 Add css stylesheet to be included at the <head> </head> and/or a title for the webpages
