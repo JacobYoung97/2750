@@ -12,10 +12,10 @@ The library is libstream.a to manipulate streams
 #include "stream.h"
 
 #define MAX_QUERY 1024 /* The text of a post is at max 800 chars (need to account for this) */
-#define HOSTNAME "dursley.socs.uoguelph.ca"
-#define USERNAME "jyoung17"
-#define PASSWORD "0932387"
-#define DATABASE "jyoung17"
+#define HOSTNAME ""
+#define USERNAME ""
+#define PASSWORD ""
+#define DATABASE ""
 
 /*
 clstr
